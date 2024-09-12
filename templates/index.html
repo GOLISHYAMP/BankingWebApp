@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="app">
+        <h1>Banking App</h1>
+        <div id="login-register">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label>Username:</label>
+                <input type="text" id="login-username" required>
+                <label>Password:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Login</button>
+            </form>
+
+            <h2>Register</h2>
+            <form id="register-form">
+                <label>Username:</label>
+                <input type="text" id="register-username" required>
+                <label>Password:</label>
+                <input type="password" id="register-password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <div id="banking-operations" style="display:none;">
+            <h2>Banking Operations</h2>
+            <button id="balance-button">Check Balance</button>
+            <p id="balance"></p>
+
+            <form id="deposit-form">
+                <label>Deposit Amount:</label>
+                <input type="number" id="deposit-amount">
+                <button type="submit">Deposit</button>
+            </form>
+
+            <form id="withdraw-form">
+                <label>Withdraw Amount:</label>
+                <input type="number" id="withdraw-amount">
+                <button type="submit">Withdraw</button>
+            </form>
+
+            <form id="transfer-form">
+                <label>Transfer Amount:</label>
+                <input type="number" id="transfer-amount">
+                <label>Recipient Username:</label>
+                <input type="text" id="recipient-username">
+                <button type="submit">Transfer</button>
+            </form>
+
+            <button id="transactions-button">View Transactions</button>
+            <ul id="transactions"></ul>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
