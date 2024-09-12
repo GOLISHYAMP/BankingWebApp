@@ -1,0 +1,1 @@
+# This project consists of the basic operations done in the banking sector and a very basic GUI.
